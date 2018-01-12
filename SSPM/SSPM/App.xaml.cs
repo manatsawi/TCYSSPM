@@ -13,7 +13,10 @@ namespace SSPM
 		{
 			InitializeComponent();
 
-			MainPage = new SSPM.MainPage();
+            MainPage = new NavigationPage(new SSPM.InitialScreen())
+            {
+                BarBackgroundColor = Color.White
+            };
 		}
 
 		protected override void OnStart ()

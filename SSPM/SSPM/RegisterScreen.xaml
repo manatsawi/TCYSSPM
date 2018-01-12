@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SSPM.RegisterScreen">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+                <Grid Padding="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ContentView HeightRequest="100" 
+                             Grid.Row="0" 
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" 
+                             Padding="0,20,0,3">
+                        <Image Source="Logo.png" Aspect="AspectFill" />
+                    </ContentView>
+
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="2"
+                    FontSize="Medium"
+                    Text="Register">
+                    </Label>
+                    <Entry x:Name="Mainuser" 
+                       Placeholder="Username" 
+                       Grid.Row="2" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                       FontSize="Micro"/>
+                    
+                    <Entry x:Name="Mainpassword" 
+                       Placeholder="Password"
+                       Grid.Row="3" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                       FontSize="Micro"/>
+
+                    <Entry x:Name="Confirmpassword" 
+                       Placeholder="Confirm Password"
+                       Grid.Row="4" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                       FontSize="Micro"/>
+
+                    <Entry x:Name="MainFirstName" 
+                       Placeholder="First Name"
+                       Grid.Row="5" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                       FontSize="Micro"/>
+
+                
+                    <Entry x:Name="MainLastName" 
+                       Placeholder="Last Name"
+                       Grid.Row="6" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                            FontSize="Micro"/>
+
+                    <Entry x:Name="MainJob" 
+                       Placeholder="Job Title"    
+                       Grid.Row="7" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                            FontSize="Micro"/>
+
+                    <Entry x:Name="MainRule" 
+                       Placeholder="Rule"    
+                       Grid.Row="8" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                            FontSize="Micro"/>
+
+
+
+                    <Button Clicked="button_Clicked" 
+                        Text="Confirm" 
+                        Grid.Row="9" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2" 
+                       StyleClass="Info"/>
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

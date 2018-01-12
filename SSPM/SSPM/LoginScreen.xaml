@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SSPM.LoginScreen">
+    <ContentPage.Content>
+        <StackLayout Padding="10"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Grid Padding="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ContentView HeightRequest="130" 
+                             Grid.Row="0" 
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2" 
+                             Padding="0,20,0,3">
+                    <Image Source="Logo.png" Aspect="AspectFill" />
+                </ContentView>
+
+                <Entry x:Name="Mainuser" 
+                       Placeholder="Username" 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                       FontSize="Micro"/>
+                <Entry x:Name="Mainpassword" 
+                       IsPassword="true" 
+                       Placeholder="Password"
+                       Grid.Row="2" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       TextColor="Black"
+                       FontSize="Micro"/>
+
+                <Button Clicked="button_Clicked" 
+                        Text="Sign In" 
+                        Grid.Row="3" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="2" 
+                       StyleClass="Info"/>
+
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

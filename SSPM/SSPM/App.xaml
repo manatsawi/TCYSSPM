@@ -2,11 +2,11 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SSPM.App"
-             xmlns:dark="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Dark">
+             xmlns:light="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light">
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
-        <ResourceDictionary MergedWith="dark:DarkThemeResources" />
+        <ResourceDictionary MergedWith="light:LightThemeResources" />
 
 	</Application.Resources>
 </Application>
