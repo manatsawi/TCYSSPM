@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SSPM.RegisterScreen">
+             x:Class="SSPM.RegisterScreen"
+             BackgroundColor="#D3D4D5">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="10"
@@ -21,15 +22,23 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
+                    <BoxView BackgroundColor="#FFFFFF" 
+                             Margin="0.5"
+                             Grid.Row="0" 
+                             Grid.RowSpan="10"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="2">
+                        
+                    </BoxView>
                     <ContentView HeightRequest="100" 
                              Grid.Row="0" 
                              Grid.Column="0"
                              Grid.ColumnSpan="2" 
-                             Padding="0,20,0,3">
+                             Padding="10,20,10,3">
                         <Image Source="Logo.png" Aspect="AspectFill" />
                     </ContentView>
 
@@ -38,66 +47,123 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    Margin="2"
+                    Margin="15,0,15,0"
                     FontSize="Medium"
                     Text="Register">
                     </Label>
+
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="15,0,5,0"
+                    FontSize="Micro"
+                    Text="User Name">
+                    </Label>
                     <Entry x:Name="Mainuser" 
-                       Placeholder="Username" 
+                       Placeholder="Username type here..." 
                        Grid.Row="2" 
-                       Grid.Column="0" 
-                       Grid.ColumnSpan="2" 
+                       Grid.Column="1" 
                        TextColor="Black"
-                       FontSize="Micro"/>
-                    
+                       FontSize="Micro"
+                            Margin="0,0,15,0"/>
+
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="15,0,5,0"
+                    FontSize="Micro"
+                    Text="Password">
+                    </Label>
                     <Entry x:Name="Mainpassword" 
-                       Placeholder="Password"
+                       Placeholder="Password type here..."
                        Grid.Row="3" 
-                       Grid.Column="0" 
-                       Grid.ColumnSpan="2" 
+                       Grid.Column="1" 
                        TextColor="Black"
-                       FontSize="Micro"/>
+                       FontSize="Micro"
+                            Margin="0,0,15,0"/>
 
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="15,0,5,0"
+                    FontSize="Micro"
+                    Text="Confirm">
+                    </Label>
                     <Entry x:Name="Confirmpassword" 
-                       Placeholder="Confirm Password"
+                       Placeholder="Confirm Password type here..."
                        Grid.Row="4" 
-                       Grid.Column="0" 
-                       Grid.ColumnSpan="2" 
+                       Grid.Column="1" 
                        TextColor="Black"
-                       FontSize="Micro"/>
+                       FontSize="Micro"
+                            Margin="0,0,15,0"/>
 
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                     Margin="15,0,5,0"
+                    FontSize="Micro"
+                    Text="First Name">
+                    </Label>
                     <Entry x:Name="MainFirstName" 
-                       Placeholder="First Name"
+                       Placeholder="First Name type here..."
                        Grid.Row="5" 
-                       Grid.Column="0" 
-                       Grid.ColumnSpan="2" 
+                       Grid.Column="1" 
                        TextColor="Black"
-                       FontSize="Micro"/>
+                       FontSize="Micro"
+                            Margin="0,0,15,0"/>
 
-                
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="6"
+                    Grid.Column="0"
+                  Margin="15,0,5,0"
+                    FontSize="Micro"
+                    Text="Last Name">
+                    </Label>
                     <Entry x:Name="MainLastName" 
-                       Placeholder="Last Name"
+                       Placeholder="Last Name type here..."
                        Grid.Row="6" 
-                       Grid.Column="0" 
-                       Grid.ColumnSpan="2" 
+                       Grid.Column="1" 
                        TextColor="Black"
-                            FontSize="Micro"/>
+                            FontSize="Micro"
+                            Margin="0,0,15,0"/>
 
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="7"
+                    Grid.Column="0"
+                     Margin="15,0,5,0"
+                    FontSize="Micro"
+                    Text="Job Title">
+                    </Label>
                     <Entry x:Name="MainJob" 
-                       Placeholder="Job Title"    
+                       Placeholder="Job Title type here..."    
                        Grid.Row="7" 
-                       Grid.Column="0" 
-                       Grid.ColumnSpan="2" 
+                       Grid.Column="1" 
                        TextColor="Black"
-                            FontSize="Micro"/>
+                            FontSize="Micro"
+                            Margin="0,0,15,0"/>
 
+
+                    <Label
+                        VerticalOptions="Center"
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Margin="15,0,5,0"
+                    FontSize="Micro"
+                    Text="Rule">
+                    </Label>
                     <Entry x:Name="MainRule" 
-                       Placeholder="Rule"    
+                       Placeholder="Select Rule"    
                        Grid.Row="8" 
-                       Grid.Column="0" 
-                       Grid.ColumnSpan="2" 
+                       Grid.Column="1" 
                        TextColor="Black"
-                            FontSize="Micro"/>
+                            FontSize="Micro"
+                            Margin="0,0,15,0"/>
 
 
 
@@ -106,7 +172,8 @@
                         Grid.Row="9" 
                         Grid.Column="0" 
                         Grid.ColumnSpan="2" 
-                       StyleClass="Info"/>
+                       StyleClass="Info"
+                             Margin="10,5,10,10"/>
 
                 </Grid>
 

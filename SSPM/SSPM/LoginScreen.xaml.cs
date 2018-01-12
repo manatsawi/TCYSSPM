@@ -23,7 +23,20 @@ namespace SSPM
 
             if (username == "admin1234" && pass == "admin1234")
             {
-                var page = new MainPage();
+                var page = new TabbedPage
+                {
+                    BackgroundColor = Color.FromHex("#F5F3F6"),
+                    Children =
+                     {
+                        new InProcessProjectScreen(),
+                        new SuccessProjectScreen(),
+                        new Setting(),
+                        new Dummy()
+
+                    }
+                    /* BarBackgroundColor = Color.FromHex("#5DCDF3"),
+                     BarTextColor = Color.White,*/
+                };
                 NavigationPage.SetHasBackButton(page, false);
                 await Navigation.PushAsync(page);
 

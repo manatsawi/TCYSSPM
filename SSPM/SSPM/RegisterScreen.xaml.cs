@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.OS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,11 +27,12 @@ namespace SSPM
             string job = Mainjob.Text;
             string rule = Mainrule.Text;*/
 
-            var page = new LoginScreen();
-            NavigationPage.SetHasBackButton(page, false);
-            await Navigation.PushAsync(page);
-
-          
+           
+                var page = new LoginScreen();
+                NavigationPage.SetHasBackButton(page, false);
+                await Navigation.PushAsync(page);
+            
+         
 
         }
     }
