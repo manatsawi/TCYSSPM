@@ -26,6 +26,8 @@ namespace SSPM
 
 
         }
+
+
         public async void button_Clicked2(object Sender, EventArgs e)
         {
             var page = new RegisterScreen();
