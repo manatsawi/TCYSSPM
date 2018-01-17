@@ -33,15 +33,6 @@
                         StyleClass="Success"
                         FontSize="Small"
                         Text="Getting Start"/>
-                
-                <Button Clicked="button_Clicked2" 
-                        VerticalOptions="FillAndExpand"
-                        Grid.Row="2" 
-                        Grid.Column="0" 
-                        Grid.ColumnSpan="2"
-                        StyleClass="Info"
-                        FontSize="Small"
-                        Text="Sign Up"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -17,7 +17,44 @@ namespace SSPM
             InitializeComponent();
         }
 
+        public async void button_Clicked(object Sender, EventArgs e)
+        {
+            string username = Mainuser.Text;
+            string pass = Mainpassword.Text;
+            var action = await DisplayAlert("Notification", "คุณต้องการเข้าสู่ระบบใช่หรือไม่", "YES", "NO");
+            if (action)
+            {
+                if (username == "1234" && pass == "1234")
+                { 
+                    var page = new TabbedPage
+                    {
+                        BackgroundColor = Color.FromHex("#F5F3F6"),
+                        Children =
+                        {
+                            new InProcessProjectScreen(),
+                            new SuccessProjectScreen()
+                        }
 
+                    };
+
+
+                    NavigationPage.SetHasBackButton(page, false);
+                    await Navigation.PushAsync(page);
+                 }
+                else
+                {
+                    await DisplayAlert("Notification", "เข้าสู่ระบบล้มเหลว! Username หรือ Password ผิด", "Cancle");
+                }
+
+            }
+            else
+            {
+                return;
+            }
+        }
+
+
+        /*
         public async void button_Clicked(object Sender, EventArgs e)
         {
             string username = Mainuser.Text;
@@ -101,6 +138,6 @@ namespace SSPM
                 return Convert.ToString(ex);
             }
 
-        }
+        }*/
     }
 }

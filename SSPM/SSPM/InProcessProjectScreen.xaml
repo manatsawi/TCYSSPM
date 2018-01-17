@@ -2,12 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SSPM.InProcessProjectScreen"
-             Title="Page1">
+             Title="โครงการกำลังพัฒนา">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10"
+            Orientation="Vertical"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+            <ListView
+                x:Name="mListView"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                HasUnevenRows="True"
+                ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding .}"
+                                   Margin="3"></Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
